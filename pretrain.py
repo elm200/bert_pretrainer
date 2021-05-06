@@ -156,7 +156,6 @@ if __name__ == "__main__":
     config.max_position_embeddings = 512
     config.vocab_size = 32000
 
-
     logger.info("USE_NSP: {}".format(USE_NSP))
     if USE_NSP:
         model = BertForPreTraining(config)
