@@ -168,7 +168,6 @@ if __name__ == "__main__":
 
     optimizer = AdamW(model.parameters(), lr=2e-5)
     model.train()
-    n_batch = 0
     train_losses = []
     for i in range(1, MAX_STEPS + 1):
         optimizer.zero_grad()
