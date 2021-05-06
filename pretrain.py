@@ -30,6 +30,7 @@ MASK_ID = 4
 IGNORE_ID = -100
 BATCH_SIZE = 16
 MAX_STEPS = 150000
+USE_NSP = False
 
 tokenizer = BertJapaneseTokenizer.from_pretrained(
     "cl-tohoku/bert-base-japanese-whole-word-masking"
@@ -154,7 +155,13 @@ if __name__ == "__main__":
     config.intermediate_size = 3072
     config.max_position_embeddings = 512
     config.vocab_size = 32000
-    model = BertForPreTrainingWithoutNSP(config)
+
+
+    logger.info("USE_NSP: {}".format(USE_NSP))
+    if USE_NSP:
+        model = BertForPreTraining(config)
+    else:
+        model = BertForPreTrainingWithoutNSP(config)
     model.to(device)
 
     logger.info(config)
