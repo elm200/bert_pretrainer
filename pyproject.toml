@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "bert_pretrainer"
+version = "0.1.0"
+description = ""
+authors = ["Eiji Sakai <eijisakai@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+sklearn = "^0.0"
+pandas = "^1.2.3"
+matplotlib = "^3.4.1"
+seaborn = "^0.11.1"
+mecab-python3 = "^1.0.3"
+lightgbm = "^3.2.0"
+neologdn = "^0.4"
+torch = "^1.8.1"
+transformers = "^4.5.0"
+fugashi = "^1.1.0"
+ipadic = "^1.0.0"
+pytokenizations = "^0.8.3"
+
+[tool.poetry.dev-dependencies]
+black = "^20.8b1"
+isort = "^5.8.0"
+jupyter = "*"
+ipykernel = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
